@@ -1,11 +1,12 @@
+import css from "./Contact.module.css";
 const Contact = ({ contact, onDelete }) => {
   return (
-    <div>
+    <div className={css.box}>
       <div>
         <b>
           <h2>{contact.name}</h2>
         </b>
-        <p>{contact.phone}</p>
+        <p>{contact.number}</p>
       </div>
       <button type="button" onClick={() => onDelete(contact.id)}>
         Delete
